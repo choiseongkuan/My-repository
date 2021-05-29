@@ -1,0 +1,30 @@
+{
+    "name": "RecyGo",
+    "short_name": "RecyGo",
+    "description": "Just Go Recycle.",
+    "version": "1.0.0",
+    "manifest_version": 1,
+    "lang": "zh-Hant-MO",
+    "display": "standalone",
+    "dir": "ltr",
+    "orientation": "landscape",
+    "theme_color": "#58A6CE",
+    "background_color": "#FFFFFF",
+    "icons": [
+        {
+            "src": "img/icon/apple-touch-icon-120x120.png",
+            "sizes": "120x120",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon/apple-touch-icon-57x57.png",
+            "sizes": "57x57",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon/apple-touch-icon-180x180.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Carbon RecyGo",
+    "short_name": "RecyGo",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#58A6CE",
+    "description": "RecyGo by Goldfish Inc."
+  }

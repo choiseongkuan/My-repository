@@ -1,0 +1,387 @@
+.app{ display: none; }
+.app.active{ display: block; }
+.app.side{
+    overflow: auto;
+    background: white;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 150%;
+    right: -150%;
+    bottom: 0;
+    z-index: 999;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    transition: .5s ease-in-out;
+}
+.app.side > * { white-space: nowrap; }
+.app.side header{ left: 150%; right: -150%; transition: .5s ease-in-out;}
+.app.side.showing{ left: 0; right: 0% }
+.app.side.showing header{ left: 0; right: 0% }
+
+.ptr--ptr{ box-shadow: none !important; }
+.ptr--box:after{
+    content: "Release to refresh";
+    color: #9A9A9A;
+    font-weight: 500;
+    transform: translateY(30px);
+}
+.ptr--content{ display: none; }
+
+#code-box{
+    margin-left: 16px;
+    border-top: .5px solid #CCCCCC;
+    border-bottom: .5px solid #CCCCCC;
+    font-size: 17px;
+}
+#code{
+    border: none;
+    padding: 13.5px 0;
+    margin-top: 19px;
+    border-radius: 0;
+    caret-color: #58A6CE;
+    appearance: none;
+    max-width: 100%;
+    margin-top: 0;
+    height: 55px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-top: .5px solid #CCCCCC;
+    font-size: 17px;
+    border-bottom: 0.5px solid #CCCCCC;
+}
+
+#code-submit-btn{
+    color: #58A6CE;
+    padding-left: 16px;
+    width: 100%;
+}
+
+.hyphen-seperator{
+    margin: 0 2px;
+}
+
+#redeem-instruction-block{
+    height: 150px;
+}
+#redeem-instruction-block img{
+    height: 150px;
+    width: 100%;
+    /*max-width: 375px;*/
+    object-fit: contain;
+}
+@media screen and (width: 375px) and (height: 768px) {
+    footer { padding-bottom: 24px; height: 73px; }
+    body { padding-bottom: 24px; }
+}
+@media screen and (width: 414px) and (height: 852px) {
+    footer { padding-bottom: 24px; height: 73px; }
+    body { padding-bottom: 24px; }
+}
+
+#qr-card {
+    width: 340px;
+    height: 539.939px;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    z-index: 999;
+}
+#qr-card .flip {
+    width: inherit;
+    height: inherit;
+    transition: 0.7s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-animation: flip 2.5s ease;
+    animation: flip 2.5s ease;
+}
+#qr-card .flip .front,
+#qr-card .flip .back {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 21.2px;
+    box-shadow: 0 1px 10px 1px rgba(0, 0, 0, 0.3);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background-size: cover;
+}
+#qr-card .flip .front {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    background-image: url("../img/icon/card-front.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+#qr-card .flip .front img {
+    height: 205px;
+    width: 205px;
+    margin-top: 290px;
+}
+#qr-card .flip .back {
+    -webkit-transform: rotateY(180deg) translateZ(0);
+    transform: rotateY(180deg) translateZ(0);
+    background-image: url("../img/icon/card-back.png");
+    font-family: Arial;
+}
+#qr-card .flip .back h3 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 30px 15px 0 15px;
+    color: #58A6CE;
+    text-transform: uppercase;
+}
+#qr-card.active .flip {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.app.main-app-ranking-page main ul.ranking-list li.ranking-list-item div#ranking-user-info-block{
+    margin-left: 10px;
+}
+.app.main-app-ranking-page main ul.ranking-list li.ranking-list-item h3.nickname {
+    margin: 1px 0;
+    font-size: 17px;
+}
+.app.main-app-ranking-page main ul.ranking-list li.ranking-list-item h4 {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 400;
+    opacity: .5;
+}
+.app.main-app-ranking-page main ul.ranking-list li.ranking-list-item.focus h4 {
+    color: white;
+}
+       
+body.black {
+  background: #0D0D0D;
+}
+body.black header {
+  background: rgba(33, 33, 33, 0.72);
+}
+body.black header h1 {
+  color: white;
+}
+body.black header.havebar {
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.16);
+}
+body.black header .right a, body.black header .right input[type="submit"] {
+  background: rgba(0, 0, 0, 0);
+}
+body.black footer {
+  border-top: 1px solid rgba(0, 0, 0, 0);
+  background: rgba(33, 33, 33, 0.72);
+}
+body.black footer.have-bar {
+  border-top: 1px solid #323232;
+}
+body.black footer div.active a {
+  color: #58A6CE;
+}
+body.black footer div a {
+  color: #8E8E93;
+}
+body.black form .select-box select {
+  background: #1C1C1D;
+}
+body.black form .select-box .select__arrow {
+  border-color: #7b7b7b transparent transparent transparent;
+}
+body.black form.important-form input::placeholder, body.black form.important-form a.submit::placeholder, body.black form.important-form .select-box::placeholder {
+  color: rgba(235, 235, 245, 0.3);
+}
+body.black form.important-form input[type="tel"],
+body.black form.important-form input[type="text"],
+body.black form.important-form input[type="email"],
+body.black form.important-form input[type="password"],
+body.black form.important-form select {
+  color: white;
+  border-bottom: 0.5px solid #8E8E93;
+  caret-color: #58A6CE;
+  background: #1C1C1D;
+}
+body.black form.important-form a.submit,
+body.black form.important-form input[type="submit"] {
+  border: 2px solid #58A6CE;
+  background: #1C1C1D;
+  color: #58A6CE;
+}
+body.black div.user-info {
+  border-bottom: .5px solid #323233;
+  background: #1C1C1D;
+  color: white;
+}
+body.black ul.user-list {
+  border-top: .5px solid #323233;
+  border-bottom: .5px solid #323233;
+  background: #1C1C1D;
+  color: white;
+}
+body.black ul.user-list li a {
+  color: white;
+}
+body.black ul.user-list li a div.info {
+  border-top: .5px solid #323233;
+}
+body.black ul.user-list li a div.info span {
+  color: rgba(235, 235, 235, 0.6);
+}
+body.black ul.user-list li a div.info span.title {
+  color: white;
+}
+body.black ul.user-list li a div.info svg {
+  fill: #323233;
+}
+body.black .app.main-app-recycle-page header, body.black .app.main-app-recycle-page main, body.black .app.main-app-recycle-page footer {
+  background: black;
+}
+body.black .app.main-app-ranking-page main ul.ranking-list li.ranking-list-item {
+  border-bottom: 1px solid #323233;
+  background: #000000;
+}
+body.black .app.main-app-ranking-page main ul.ranking-list li.ranking-list-item h3, body.black .app.main-app-ranking-page main ul.ranking-list li.ranking-list-item h4 {
+  color: white;
+}
+body.black .app.main-app-ranking-page main ul.ranking-list li.ranking-list-item.focus {
+  background: #58A6CE;
+}
+body.black .app.main-app-ranking-page main ul.ranking-list li.ranking-list-item.focus h3 {
+  color: #FFFFFF;
+}
+body.black .app.main-app-me-page main {
+  background: #0D0D0D;
+}
+body.black .app.main-app-about-page {
+  background: #0D0D0D;
+  color: white;
+}
+body.black .app.main-app-about-page .bottom-options {
+  color: #363636;
+}
+body.black .app.main-app-account-page {
+  height: 100%;
+}
+body.black .app.main-app-account-page main {
+  height: 100%;
+  background: #0D0D0D;
+  display: block;
+  padding: 0;
+}
+body.black .app.main-app-account-page main form.important-form {
+  margin-top: 44px;
+}
+body.black .app.main-app-account-page main form.important-form div.user-info {
+  padding: 15px;
+  height: auto;
+}
+body.black .app.main-app-account-page main form.important-form div.user-info input[type="file"] {
+  margin-top: 0;
+}
+body.black .app.main-app-account-page main form.important-form div.user-info span {
+  margin: 20px 0 0px 0;
+  font-size: 12px;
+}
+body.black .app.main-app-account-page main form.important-form ul.user-list {
+  width: 100%;
+}
+body.black .app.main-app-account-page main form.important-form ul.user-list li {
+  color: white;
+}
+body.black .app.main-app-account-page main form.important-form ul.user-list li input[type="tel"].info,
+body.black .app.main-app-account-page main form.important-form ul.user-list li input[type="text"].info,
+body.black .app.main-app-account-page main form.important-form ul.user-list li input[type="email"].info,
+body.black .app.main-app-account-page main form.important-form ul.user-list li input[type="password"].info,
+body.black .app.main-app-account-page main form.important-form ul.user-list li select.info {
+  border-top: .5px solid #363636;
+}
+body.black .app.main-app-account-page main form.important-form #change-password-link {
+  color: #58A6CE;
+}
+body.black .app.main-app-footprint-page main {
+  background: #0D0D0D;
+}
+body.black .app.main-app-footprint-page main ul.user-list {
+  border-top: .5px solid #363636;
+  border-bottom: .5px solid #363636;
+  background: #1C1C1D;
+}
+body.black .app.main-app-footprint-page main ul.user-list li {
+  color: black;
+}
+body.black .app.main-app-footprint-page main ul.user-list li div.info {
+  border-top: .5px solid #363636;
+  color: #D1D1D6;
+}
+body.black .app.main-app-footprint-page main ul.user-list li div.info span.amount.add {
+  color: #FF453A;
+}
+body.black .app.main-app-footprint-page main ul.user-list li div.info span.amount.deduct {
+  color: #30D158;
+}
+body.black .app.main-app-footprint-page main ul.user-list li div.info .user-list-info-left span.title {
+  color: white;
+  font-size: 17px;
+}
+body.black .app.main-app-footprint-page main ul.user-list li.month-selector form input {
+  background: #1C1C1D;
+  color: white;
+  border: 1px solid #D1D1D6;
+}
+body.black .app.main-app-footprint-page main ul.user-list li.month-selector form a {
+  background: #1C1C1D;
+  color: #58A6CE;
+}
+body.black .app.main-app-tax-page main {
+  background: #0D0D0D;
+}
+body.black .app.main-app-tax-page main div.user-info h3 {
+  background: #58A6CE;
+  color: white;
+}
+body.black .app.main-app-tax-page main .user-list {
+  background: #1C1C1D;
+}
+body.black .app.main-app-tax-page main .user-list li {
+  color: black;
+}
+body.black .app.main-app-tax-page main .user-list li div.info {
+  border-top: .5px solid #363636;
+  color: #707070;
+}
+body.black .app.main-app-tax-page main .user-list li div.info span.amount {
+  color: white;
+}
+body.black .app.main-app-tax-page main .user-list li div.info .user-list-info-left span.title {
+  color: white;
+}
+body.black .app.main-app-tax-page main .user-list li.ul-title {
+  background: rgba(33, 33, 33, 0.72);
+  color: rgba(235, 235, 245, 0.6);
+  font-weight: 600;
+}
+body.black .app.side {
+  background: #1C1C1D;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+body.black .ptr--box:after {
+  color: #9A9A9A;
+}
+body.black #code-box {
+  border-top: .5px solid #363636;
+  border-bottom: .5px solid #363636;
+}
+body.black #code {
+  caret-color: #58A6CE;
+  border-top: .5px solid #363636;
+  border-bottom: 0.5px solid #363636;
+}
+body.black .app.main-app-ranking-page main ul.ranking-list li.ranking-list-item.focus h4 {
+  color: white;
+}
+body.black #floting-snipper {
+  background: rgba(0, 0, 0, 0.75);
+}
+body.black .main-app-recycle-page footer{
+    border-top: 1px solid rgba(0, 0, 0, 0);
+}
